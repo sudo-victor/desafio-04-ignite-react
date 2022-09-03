@@ -9,8 +9,10 @@ import { useField } from '@unform/core';
 
 import { Container } from './styles';
 
-const Input = ({ name, icon: Icon, ...rest }) => {
-  const inputRef = useRef(null);
+type IProps = any;
+
+const Input = ({ name, icon: Icon, ...rest }: IProps): JSX.Element => {
+  const inputRef = useRef<any>(null);
 
   const [isFocused, setIsFocused] = useState(false);
   const [isFilled, setIsFilled] = useState(false);
